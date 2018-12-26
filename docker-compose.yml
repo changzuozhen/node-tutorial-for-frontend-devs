@@ -1,0 +1,34 @@
+version: "2"
+
+networks:
+  apptest-network:
+    driver: bridge
+
+
+services:
+
+  mongotest:
+    container_name: mongotest
+    image: mongo:latest
+    networks:
+      - apptest-network
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
+
+
+  apptest:
+    container_name: apptest
+#    restart: always
+    build:
+      context: .
+      dockerfile: nede.dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - apptest-network
+#    depends_on:
+#      - mongotest
+
+

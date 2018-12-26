@@ -8,6 +8,12 @@ var bodyParser = require('body-parser');
 // New Code
 var mongo = require('mongodb');
 var monk = require('monk');
+
+// docker-compose up
+// var db = monk('mongotest:27017/nodetest1');
+
+// mongod --dbpath ./data
+// npm start
 var db = monk('localhost:27017/nodetest1');
 
 var routes = require('./routes/index');
