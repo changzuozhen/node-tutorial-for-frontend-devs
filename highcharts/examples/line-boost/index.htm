@@ -62,25 +62,31 @@
     console.time('line');
     Highcharts.chart('container', {
 
+        credits: {enabled: false},
         chart: {
-            zoomType: 'x'
+            zoomType:
+                'x'
         },
 
         title: {
             text: 'Highcharts drawing ' + n + ' points'
-        },
+        }
+        ,
 
         subtitle: {
             text: 'Using the Boost module'
-        },
+        }
+        ,
 
         tooltip: {
             valueDecimals: 2
-        },
+        }
+        ,
 
         xAxis: {
             type: 'datetime'
-        },
+        }
+        ,
 
         series: [{
             data: data,
@@ -88,7 +94,8 @@
             name: 'Hourly data points'
         }]
 
-    });
+    })
+    ;
     console.timeEnd('line');
 
 </script>

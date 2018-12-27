@@ -22,29 +22,36 @@
 
     Highcharts.chart('container', {
 
+        credits: {enabled: false},
         chart: {
-            type: 'boxplot'
+            type:
+                'boxplot'
         },
 
         title: {
             text: 'Highcharts Box Plot Example'
-        },
+        }
+        ,
 
         legend: {
             enabled: false
-        },
+        }
+        ,
 
         xAxis: {
             categories: ['1', '2', '3', '4', '5'],
-            title: {
-                text: 'Experiment No.'
-            }
-        },
+            title:
+                {
+                    text: 'Experiment No.'
+                }
+        }
+        ,
 
         yAxis: {
             title: {
                 text: 'Observations'
-            },
+            }
+            ,
             plotLines: [{
                 value: 932,
                 color: 'red',
@@ -57,7 +64,8 @@
                     }
                 }
             }]
-        },
+        }
+        ,
 
         series: [{
             name: 'Observations',
@@ -91,7 +99,8 @@
             }
         }]
 
-    });
+    })
+    ;
 </script>
 </body>
 </html>

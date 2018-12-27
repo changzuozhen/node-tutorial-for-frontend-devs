@@ -25,27 +25,35 @@
 
 <script type="text/javascript">
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'tilemap',
-            inverted: true,
-            height: '80%'
+            type:
+                'tilemap',
+            inverted:
+                true,
+            height:
+                '80%'
         },
 
         title: {
             text: 'U.S. states by population in 2016'
-        },
+        }
+        ,
 
         subtitle: {
             text: 'Source:<a href="https://simple.wikipedia.org/wiki/List_of_U.S._states_by_population">Wikipedia</a>'
-        },
+        }
+        ,
 
         xAxis: {
             visible: false
-        },
+        }
+        ,
 
         yAxis: {
             visible: false
-        },
+        }
+        ,
 
         colorAxis: {
             dataClasses: [{
@@ -68,25 +76,32 @@
                 color: '#FF2371',
                 name: '> 20M'
             }]
-        },
+        }
+        ,
 
         tooltip: {
             headerFormat: '',
-            pointFormat: 'The population of <b> {point.name}</b> is <b>{point.value}</b>'
-        },
+            pointFormat:
+                'The population of <b> {point.name}</b> is <b>{point.value}</b>'
+        }
+        ,
 
         plotOptions: {
             series: {
                 dataLabels: {
                     enabled: true,
-                    format: '{point.hc-a2}',
-                    color: '#000000',
-                    style: {
-                        textOutline: false
-                    }
+                    format:
+                        '{point.hc-a2}',
+                    color:
+                        '#000000',
+                    style:
+                        {
+                            textOutline: false
+                        }
                 }
             }
-        },
+        }
+        ,
 
         series: [{
             name: '',
@@ -449,7 +464,8 @@
                 value: 584153
             }]
         }]
-    });
+    })
+    ;
 
 </script>
 </body>

@@ -58,18 +58,25 @@
 
     function createChart() {
         Highcharts.chart('container', {
-            chart: {
-                type: 'spline'
-            },
-            title: {
-                text: 'Live Data'
-            },
-            data: {
-                csvURL: urlInput.value,
-                enablePolling: pollingCheckbox.checked === true,
-                dataRefreshRate: parseInt(pollingInput.value, 10)
+                credits: {enabled: false},
+                chart: {
+                    type:
+                        'spline'
+                },
+                title: {
+                    text: 'Live Data'
+                }
+                ,
+                data: {
+                    csvURL: urlInput.value,
+                    enablePolling:
+                        pollingCheckbox.checked === true,
+                    dataRefreshRate:
+                        parseInt(pollingInput.value, 10)
+                }
             }
-        });
+        )
+        ;
 
         if (pollingInput.value < 1 || !pollingInput.value) {
             pollingInput.value = 1;

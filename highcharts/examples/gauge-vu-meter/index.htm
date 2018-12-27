@@ -21,24 +21,37 @@
 
     Highcharts.chart('container', {
 
+            credits: {enabled: false},
             chart: {
-                type: 'gauge',
-                plotBorderWidth: 1,
-                plotBackgroundColor: {
-                    linearGradient: {x1: 0, y1: 0, x2: 0, y2: 1},
-                    stops: [
-                        [0, '#FFF4C6'],
-                        [0.3, '#FFFFFF'],
-                        [1, '#FFF4C6']
-                    ]
-                },
+                type:
+                    'gauge',
+                plotBorderWidth:
+                    1,
+                plotBackgroundColor:
+                    {
+                        linearGradient: {
+                            x1: 0, y1:
+                                0, x2:
+                                0, y2:
+                                1
+                        }
+                        ,
+                        stops: [
+                            [0, '#FFF4C6'],
+                            [0.3, '#FFFFFF'],
+                            [1, '#FFF4C6']
+                        ]
+                    }
+                ,
                 plotBackgroundImage: null,
-                height: 200
+                height:
+                    200
             },
 
             title: {
                 text: 'VU meter'
-            },
+            }
+            ,
 
             pane: [{
                 startAngle: -45,
@@ -54,9 +67,11 @@
                 size: 300
             }],
 
-            tooltip: {
-                enabled: false
-            },
+            tooltip:
+                {
+                    enabled: false
+                }
+            ,
 
             yAxis: [{
                 min: -20,
@@ -102,16 +117,19 @@
                 }
             }],
 
-            plotOptions: {
-                gauge: {
-                    dataLabels: {
-                        enabled: false
-                    },
-                    dial: {
-                        radius: '100%'
+            plotOptions:
+                {
+                    gauge: {
+                        dataLabels: {
+                            enabled: false
+                        }
+                        ,
+                        dial: {
+                            radius: '100%'
+                        }
                     }
                 }
-            },
+            ,
 
 
             series: [{
@@ -151,7 +169,9 @@
                 }
             }, 500);
 
-        });
+        }
+    )
+    ;
 </script>
 </body>
 </html>

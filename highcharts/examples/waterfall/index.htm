@@ -21,31 +21,38 @@
 <script type="text/javascript">
 
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'waterfall'
+            type:
+                'waterfall'
         },
 
         title: {
             text: 'Highcharts Waterfall'
-        },
+        }
+        ,
 
         xAxis: {
             type: 'category'
-        },
+        }
+        ,
 
         yAxis: {
             title: {
                 text: 'USD'
             }
-        },
+        }
+        ,
 
         legend: {
             enabled: false
-        },
+        }
+        ,
 
         tooltip: {
             pointFormat: '<b>${point.y:,.2f}</b> USD'
-        },
+        }
+        ,
 
         series: [{
             upColor: Highcharts.getOptions().colors[2],
@@ -85,7 +92,8 @@
             },
             pointPadding: 0
         }]
-    });
+    })
+    ;
 
 </script>
 </body>

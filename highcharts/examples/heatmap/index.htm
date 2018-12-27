@@ -23,48 +23,67 @@
 
     Highcharts.chart('container', {
 
+        credits: {enabled: false},
         chart: {
-            type: 'heatmap',
-            marginTop: 40,
-            marginBottom: 80,
-            plotBorderWidth: 1
+            type:
+                'heatmap',
+            marginTop:
+                40,
+            marginBottom:
+                80,
+            plotBorderWidth:
+                1
         },
 
 
         title: {
             text: 'Sales per employee per weekday'
-        },
+        }
+        ,
 
         xAxis: {
             categories: ['Alexander', 'Marie', 'Maximilian', 'Sophia', 'Lukas', 'Maria', 'Leon', 'Anna', 'Tim', 'Laura']
-        },
+        }
+        ,
 
         yAxis: {
             categories: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-            title: null
-        },
+            title:
+                null
+        }
+        ,
 
         colorAxis: {
             min: 0,
-            minColor: '#FFFFFF',
-            maxColor: Highcharts.getOptions().colors[0]
-        },
+            minColor:
+                '#FFFFFF',
+            maxColor:
+                Highcharts.getOptions().colors[0]
+        }
+        ,
 
         legend: {
             align: 'right',
-            layout: 'vertical',
-            margin: 0,
-            verticalAlign: 'top',
-            y: 25,
-            symbolHeight: 280
-        },
+            layout:
+                'vertical',
+            margin:
+                0,
+            verticalAlign:
+                'top',
+            y:
+                25,
+            symbolHeight:
+                280
+        }
+        ,
 
         tooltip: {
             formatter: function () {
                 return '<b>' + this.series.xAxis.categories[this.point.x] + '</b> sold <br><b>' +
                     this.point.value + '</b> items on <br><b>' + this.series.yAxis.categories[this.point.y] + '</b>';
             }
-        },
+        }
+        ,
 
         series: [{
             name: 'Sales per employee',
@@ -76,7 +95,8 @@
             }
         }]
 
-    });
+    })
+    ;
 </script>
 </body>
 </html>

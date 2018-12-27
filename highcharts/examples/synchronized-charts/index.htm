@@ -122,37 +122,51 @@
                 document.getElementById('container').appendChild(chartDiv);
 
                 let json_data = {
+                    credits: {enabled: false},
                     chart: {
-                        marginLeft: 40, // Keep all charts left aligned
-                        spacingTop: 20,
-                        spacingBottom: 20
+                        marginLeft:
+                            40, // Keep all charts left aligned
+                        spacingTop:
+                            20,
+                        spacingBottom:
+                            20
                     },
                     title: {
                         text: dataset.name,
-                        align: 'left',
-                        margin: 0,
-                        x: 30
-                    },
+                        align:
+                            'left',
+                        margin:
+                            0,
+                        x:
+                            30
+                    }
+                    ,
                     credits: {
                         enabled: false
-                    },
+                    }
+                    ,
                     legend: {
                         enabled: false
-                    },
+                    }
+                    ,
                     xAxis: {
                         crosshair: true,
-                        events: {
-                            setExtremes: syncExtremes
-                        },
+                        events:
+                            {
+                                setExtremes: syncExtremes
+                            }
+                        ,
                         labels: {
                             format: '{value} km'
                         }
-                    },
+                    }
+                    ,
                     yAxis: {
                         title: {
                             text: null
                         }
-                    },
+                    }
+                    ,
                     tooltip: {
                         positioner: function () {
                             return {
@@ -160,17 +174,25 @@
                                 x: this.chart.chartWidth - this.label.width,
                                 y: 10 // align to title
                             };
-                        },
+                        }
+                        ,
                         borderWidth: 0,
-                        backgroundColor: 'none',
-                        pointFormat: '{point.y}',
-                        headerFormat: '',
-                        shadow: false,
-                        style: {
-                            fontSize: '18px'
-                        },
+                        backgroundColor:
+                            'none',
+                        pointFormat:
+                            '{point.y}',
+                        headerFormat:
+                            '',
+                        shadow:
+                            false,
+                        style:
+                            {
+                                fontSize: '18px'
+                            }
+                        ,
                         valueDecimals: dataset.valueDecimals
-                    },
+                    }
+                    ,
                     series: [{
                         data: dataset.data,
                         name: dataset.name,
@@ -185,7 +207,8 @@
                 Highcharts.chart(chartDiv, json_data);
             });
         }
-    });
+    })
+    ;
 
 </script>
 </body>

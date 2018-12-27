@@ -32,45 +32,56 @@
         function (data) {
 
             Highcharts.chart('container', {
+                credits: {enabled: false},
                 chart: {
-                    type: 'spline',
-                    parallelCoordinates: true,
-                    parallelAxes: {
-                        lineWidth: 2
-                    }
+                    type:
+                        'spline',
+                    parallelCoordinates:
+                        true,
+                    parallelAxes:
+                        {
+                            lineWidth: 2
+                        }
                 },
                 title: {
                     text: 'Marathon set'
-                },
+                }
+                ,
                 plotOptions: {
                     series: {
                         animation: false,
-                        marker: {
-                            enabled: false,
-                            states: {
-                                hover: {
-                                    enabled: false
-                                }
+                        marker:
+                            {
+                                enabled: false,
+                                states:
+                                    {
+                                        hover: {
+                                            enabled: false
+                                        }
+                                    }
                             }
-                        },
+                        ,
                         states: {
                             hover: {
                                 halo: {
                                     size: 0
                                 }
                             }
-                        },
+                        }
+                        ,
                         events: {
                             mouseOver: function () {
                                 this.group.toFront();
                             }
                         }
                     }
-                },
+                }
+                ,
                 tooltip: {
                     pointFormat: '<span style="color:{point.color}">\u25CF</span>' +
                         '{series.name}: <b>{point.formattedValue}</b><br/>'
-                },
+                }
+                ,
                 xAxis: {
                     categories: [
                         'Training date',
@@ -81,8 +92,10 @@
                         'Short or long',
                         'After 2004'
                     ],
-                    offset: 10
-                },
+                    offset:
+                        10
+                }
+                ,
                 yAxis: [{
                     type: 'datetime',
                     tooltipValueFormat: '{value:%Y-%m-%d}'
@@ -112,17 +125,20 @@
                 }, {
                     categories: ['Before', 'After']
                 }],
-                colors: ['rgba(11, 200, 200, 0.1)'],
-                series: data.map(function (set, i) {
-                    return {
-                        name: 'Runner ' + i,
-                        data: set,
-                        shadow: false
-                    };
-                })
+                colors:
+                    ['rgba(11, 200, 200, 0.1)'],
+                series:
+                    data.map(function (set, i) {
+                        return {
+                            name: 'Runner ' + i,
+                            data: set,
+                            shadow: false
+                        };
+                    })
             });
         }
-    );
+    )
+    ;
 
 </script>
 </body>

@@ -21,19 +21,23 @@
 <script type="text/javascript">
 
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'column'
+            type:
+                'column'
         },
         title: {
             text: 'Efficiency Optimization by Branch'
-        },
+        }
+        ,
         xAxis: {
             categories: [
                 'Seattle HQ',
                 'San Francisco',
                 'Tokyo'
             ]
-        },
+        }
+        ,
         yAxis: [{
             min: 0,
             title: {
@@ -45,19 +49,25 @@
             },
             opposite: true
         }],
-        legend: {
-            shadow: false
-        },
+        legend:
+            {
+                shadow: false
+            }
+        ,
         tooltip: {
             shared: true
-        },
+        }
+        ,
         plotOptions: {
             column: {
                 grouping: false,
-                shadow: false,
-                borderWidth: 0
+                shadow:
+                    false,
+                borderWidth:
+                    0
             }
-        },
+        }
+        ,
         series: [{
             name: 'Employees',
             color: 'rgba(165,170,217,1)',

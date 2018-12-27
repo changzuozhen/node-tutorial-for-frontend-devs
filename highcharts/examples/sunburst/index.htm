@@ -1405,17 +1405,19 @@
 
 
     Highcharts.chart('container', {
-
+        credits: {enabled: false},
         chart: {
-            height: '100%'
+            height:
+                '100%'
         },
-
         title: {
             text: 'World population 2017'
-        },
+        }
+        ,
         subtitle: {
             text: 'Source <href="https://en.wikipedia.org/wiki/List_of_countries_by_population_(United_Nations)">Wikipedia</a>'
-        },
+        }
+        ,
         series: [{
             type: "sunburst",
             data: data,
@@ -1458,11 +1460,14 @@
                 }]
 
         }],
-        tooltip: {
-            headerFormat: "",
-            pointFormat: 'The population of <b>{point.name}</b> is <b>{point.value}</b>'
-        }
-    });
+        tooltip:
+            {
+                headerFormat: "",
+                pointFormat:
+                    'The population of <b>{point.name}</b> is <b>{point.value}</b>'
+            }
+    })
+    ;
 </script>
 </body>
 </html>

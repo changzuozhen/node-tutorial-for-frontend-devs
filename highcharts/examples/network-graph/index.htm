@@ -63,24 +63,31 @@
     );
 
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'networkgraph',
-            height: '100%'
+            type:
+                'networkgraph',
+            height:
+                '100%'
         },
         title: {
             text: 'The Indo-European Laungauge Tree'
-        },
+        }
+        ,
         subtitle: {
             text: 'A Force-Directed Network Graph in Highcharts'
-        },
+        }
+        ,
         plotOptions: {
             networkgraph: {
                 keys: ['from', 'to'],
-                layoutAlgorithm: {
-                    enableSimulation: true
-                }
+                layoutAlgorithm:
+                    {
+                        enableSimulation: true
+                    }
             }
-        },
+        }
+        ,
         series: [{
             dataLabels: {
                 enabled: true
@@ -213,7 +220,8 @@
                 ['South Slavic', 'Rusyn']
             ]
         }]
-    });
+    })
+    ;
 
 
 </script>

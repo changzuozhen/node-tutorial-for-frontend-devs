@@ -24,22 +24,29 @@
 
 <script type="text/javascript">
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'xrange'
+            type:
+                'xrange'
         },
         title: {
             text: 'Highcharts X-range'
-        },
+        }
+        ,
         xAxis: {
             type: 'datetime'
-        },
+        }
+        ,
         yAxis: {
             title: {
                 text: ''
-            },
+            }
+            ,
             categories: ['Prototyping', 'Development', 'Testing'],
-            reversed: true
-        },
+            reversed:
+                true
+        }
+        ,
         series: [{
             name: 'Project 1',
             // pointPadding: 0,
@@ -73,7 +80,8 @@
             }
         }]
 
-    });
+    })
+    ;
 </script>
 </body>
 </html>

@@ -19,64 +19,89 @@
 <script type="text/javascript">
 
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'scatter',
-            zoomType: 'xy'
+            type:
+                'scatter',
+            zoomType:
+                'xy'
         },
         title: {
             text: 'Height Versus Weight of 507 Individuals by Gender'
-        },
+        }
+        ,
         subtitle: {
             text: 'Source: Heinz  2003'
-        },
+        }
+        ,
         xAxis: {
             title: {
                 enabled: true,
-                text: 'Height (cm)'
-            },
+                text:
+                    'Height (cm)'
+            }
+            ,
             startOnTick: true,
-            endOnTick: true,
-            showLastLabel: true
-        },
+            endOnTick:
+                true,
+            showLastLabel:
+                true
+        }
+        ,
         yAxis: {
             title: {
                 text: 'Weight (kg)'
             }
-        },
+        }
+        ,
         legend: {
             layout: 'vertical',
-            align: 'left',
-            verticalAlign: 'top',
-            x: 100,
-            y: 70,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
-            borderWidth: 1
-        },
+            align:
+                'left',
+            verticalAlign:
+                'top',
+            x:
+                100,
+            y:
+                70,
+            floating:
+                true,
+            backgroundColor:
+                (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+            borderWidth:
+                1
+        }
+        ,
         plotOptions: {
             scatter: {
                 marker: {
                     radius: 5,
-                    states: {
-                        hover: {
-                            enabled: true,
-                            lineColor: 'rgb(100,100,100)'
+                    states:
+                        {
+                            hover: {
+                                enabled: true,
+                                lineColor:
+                                    'rgb(100,100,100)'
+                            }
                         }
-                    }
-                },
+                }
+                ,
                 states: {
                     hover: {
                         marker: {
                             enabled: false
                         }
                     }
-                },
+                }
+                ,
                 tooltip: {
                     headerFormat: '<b>{series.name}</b><br>',
-                    pointFormat: '{point.x} cm, {point.y} kg'
+                    pointFormat:
+                        '{point.x} cm, {point.y} kg'
                 }
             }
-        },
+        }
+        ,
         series: [{
             name: 'Female',
             color: 'rgba(223, 83, 83, .5)',
@@ -187,7 +212,8 @@
                 [170.2, 62.3], [177.8, 82.7], [179.1, 79.1], [190.5, 98.2], [177.8, 84.1],
                 [180.3, 83.2], [180.3, 83.2]]
         }]
-    });
+    })
+    ;
 
 
 </script>

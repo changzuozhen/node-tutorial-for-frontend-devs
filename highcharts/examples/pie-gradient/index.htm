@@ -39,32 +39,45 @@
 
     // Build the chart
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
+            plotBackgroundColor:
+                null,
+            plotBorderWidth:
+                null,
+            plotShadow:
+                false,
+            type:
+                'pie'
         },
         title: {
             text: 'Browser market shares in January, 2018'
-        },
+        }
+        ,
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
+        }
+        ,
         plotOptions: {
             pie: {
                 allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    },
-                    connectorColor: 'silver'
-                }
+                cursor:
+                    'pointer',
+                dataLabels:
+                    {
+                        enabled: true,
+                        format:
+                            '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        style:
+                            {
+                                color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                            }
+                        ,
+                        connectorColor: 'silver'
+                    }
             }
-        },
+        }
+        ,
         series: [{
             name: 'Share',
             data: [
@@ -76,7 +89,8 @@
                 {name: 'Other', y: 7.05}
             ]
         }]
-    });
+    })
+    ;
 </script>
 </body>
 </html>

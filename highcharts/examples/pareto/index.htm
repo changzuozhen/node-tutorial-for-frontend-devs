@@ -21,16 +21,21 @@
 
 <script type="text/javascript">
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            renderTo: 'container',
-            type: 'column'
+            renderTo:
+                'container',
+            type:
+                'column'
         },
         title: {
             text: 'Restaurants Complaints'
-        },
+        }
+        ,
         tooltip: {
             shared: true
-        },
+        }
+        ,
         xAxis: {
             categories: [
                 'Overpriced',
@@ -42,8 +47,10 @@
                 'Too noisy',
                 'Unfriendly staff'
             ],
-            crosshair: true
-        },
+            crosshair:
+                true
+        }
+        ,
         yAxis: [{
             title: {
                 text: ''
@@ -61,19 +68,21 @@
                 format: "{value}%"
             }
         }],
-        series: [{
-            type: 'pareto',
-            name: 'Pareto',
-            yAxis: 1,
-            zIndex: 10,
-            baseSeries: 1
-        }, {
-            name: 'Complaints',
-            type: 'column',
-            zIndex: 2,
-            data: [755, 222, 151, 86, 72, 51, 36, 10]
-        }]
-    });
+        series:
+            [{
+                type: 'pareto',
+                name: 'Pareto',
+                yAxis: 1,
+                zIndex: 10,
+                baseSeries: 1
+            }, {
+                name: 'Complaints',
+                type: 'column',
+                zIndex: 2,
+                data: [755, 222, 151, 86, 72, 51, 36, 10]
+            }]
+    })
+    ;
 </script>
 </body>
 </html>

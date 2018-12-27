@@ -24,29 +24,36 @@
 
     Highcharts.chart('container', {
 
+        credits: {enabled: false},
         chart: {
-            type: 'variwide'
+            type:
+                'variwide'
         },
 
         title: {
             text: 'Labor Costs in Europe, 2016'
-        },
+        }
+        ,
 
         subtitle: {
             text: 'Source: <a href="http://ec.europa.eu/eurostat/web/' +
                 'labour-market/labour-costs/main-tables">eurostat</a>'
-        },
+        }
+        ,
 
         xAxis: {
             type: 'category',
-            title: {
-                text: 'Column widths are proportional to GDP'
-            }
-        },
+            title:
+                {
+                    text: 'Column widths are proportional to GDP'
+                }
+        }
+        ,
 
         legend: {
             enabled: false
-        },
+        }
+        ,
 
         series: [{
             name: 'Labor Costs',
@@ -82,7 +89,8 @@
             colorByPoint: true
         }]
 
-    });
+    })
+    ;
 
 </script>
 </body>

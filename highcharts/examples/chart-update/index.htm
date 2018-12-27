@@ -53,39 +53,51 @@
 
     $('#plain').click(function () {
         chart.update({
+            credits: {enabled: false},
             chart: {
-                inverted: false,
-                polar: false
+                inverted:
+                    false,
+                polar:
+                    false
             },
             subtitle: {
                 text: 'Plain'
             }
         });
-    });
+    })
+    ;
 
     $('#inverted').click(function () {
         chart.update({
+            credits: {enabled: false},
             chart: {
-                inverted: true,
-                polar: false
+                inverted:
+                    true,
+                polar:
+                    false
             },
             subtitle: {
                 text: 'Inverted'
             }
         });
-    });
+    })
+    ;
 
     $('#polar').click(function () {
         chart.update({
+            credits: {enabled: false},
             chart: {
-                inverted: false,
-                polar: true
+                inverted:
+                    false,
+                polar:
+                    true
             },
             subtitle: {
                 text: 'Polar'
             }
         });
-    });
+    })
+    ;
 
 </script>
 </body>

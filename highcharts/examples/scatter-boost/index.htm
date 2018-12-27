@@ -43,40 +43,55 @@
     console.time('scatter');
     Highcharts.chart('container', {
 
+        credits: {enabled: false},
         chart: {
-            zoomType: 'xy',
-            height: '100%'
+            zoomType:
+                'xy',
+            height:
+                '100%'
         },
 
         boost: {
             useGPUTranslations: true,
-            usePreAllocated: true
-        },
+            usePreAllocated:
+                true
+        }
+        ,
 
         xAxis: {
             min: 0,
-            max: 100,
-            gridLineWidth: 1
-        },
+            max:
+                100,
+            gridLineWidth:
+                1
+        }
+        ,
 
         yAxis: {
             // Renders faster when we don't have to compute min and max
             min: 0,
-            max: 100,
-            minPadding: 0,
-            maxPadding: 0,
-            title: {
-                text: null
-            }
-        },
+            max:
+                100,
+            minPadding:
+                0,
+            maxPadding:
+                0,
+            title:
+                {
+                    text: null
+                }
+        }
+        ,
 
         title: {
             text: 'Scatter chart with 1 million points'
-        },
+        }
+        ,
 
         legend: {
             enabled: false
-        },
+        }
+        ,
 
         series: [{
             type: 'scatter',
@@ -91,7 +106,8 @@
             }
         }]
 
-    });
+    })
+    ;
     console.timeEnd('scatter');
 
 </script>

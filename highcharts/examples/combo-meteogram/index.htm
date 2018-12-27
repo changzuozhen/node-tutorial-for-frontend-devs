@@ -183,17 +183,26 @@
         var meteogram = this;
 
         return {
+            credits: {enabled: false},
             chart: {
-                renderTo: this.container,
-                marginBottom: 70,
-                marginRight: 40,
-                marginTop: 50,
-                plotBorderWidth: 1,
-                height: 310,
-                alignTicks: false,
-                scrollablePlotArea: {
-                    minWidth: 720
-                }
+                renderTo:
+                this.container,
+                marginBottom:
+                    70,
+                marginRight:
+                    40,
+                marginTop:
+                    50,
+                plotBorderWidth:
+                    1,
+                height:
+                    310,
+                alignTicks:
+                    false,
+                scrollablePlotArea:
+                    {
+                        minWidth: 720
+                    }
             },
 
             defs: {
@@ -211,33 +220,43 @@
                         strokeWidth: 1
                     }
                 }]
-            },
+            }
+            ,
 
             title: {
                 text: this.getTitle(),
-                align: 'left',
-                style: {
-                    whiteSpace: 'nowrap',
-                    textOverflow: 'ellipsis'
-                }
-            },
+                align:
+                    'left',
+                style:
+                    {
+                        whiteSpace: 'nowrap',
+                        textOverflow:
+                            'ellipsis'
+                    }
+            }
+            ,
 
             credits: {
                 text: 'Forecast from <a href="http://yr.no">yr.no</a>',
-                href: this.xml.querySelector('credit link').getAttribute('url'),
-                position: {
-                    x: -40
-                }
-            },
+                href:
+                    this.xml.querySelector('credit link').getAttribute('url'),
+                position:
+                    {
+                        x: -40
+                    }
+            }
+            ,
 
             tooltip: {
                 shared: true,
-                useHTML: true,
+                useHTML:
+                    true,
                 headerFormat:
                     '<small>{point.x:%A, %b %e, %H:%M} - {point.point.to:%H:%M}</small><br>' +
                     '<b>{point.point.symbolName}</b><br>'
 
-            },
+            }
+            ,
 
             xAxis: [{ // Bottom X axis
                 type: 'datetime',
@@ -271,76 +290,80 @@
                 gridLineWidth: 1
             }],
 
-            yAxis: [{ // temperature axis
-                title: {
-                    text: null
-                },
-                labels: {
-                    format: '{value}°',
-                    style: {
-                        fontSize: '10px'
+            yAxis:
+                [{ // temperature axis
+                    title: {
+                        text: null
                     },
-                    x: -3
-                },
-                plotLines: [{ // zero plane
-                    value: 0,
-                    color: '#BBBBBB',
-                    width: 1,
-                    zIndex: 2
+                    labels: {
+                        format: '{value}°',
+                        style: {
+                            fontSize: '10px'
+                        },
+                        x: -3
+                    },
+                    plotLines: [{ // zero plane
+                        value: 0,
+                        color: '#BBBBBB',
+                        width: 1,
+                        zIndex: 2
+                    }],
+                    maxPadding: 0.3,
+                    minRange: 8,
+                    tickInterval: 1,
+                    gridLineColor: (Highcharts.theme && Highcharts.theme.background2) || '#F0F0F0'
+
+                }, { // precipitation axis
+                    title: {
+                        text: null
+                    },
+                    labels: {
+                        enabled: false
+                    },
+                    gridLineWidth: 0,
+                    tickLength: 0,
+                    minRange: 10,
+                    min: 0
+
+                }, { // Air pressure
+                    allowDecimals: false,
+                    title: { // Title on top of axis
+                        text: 'hPa',
+                        offset: 0,
+                        align: 'high',
+                        rotation: 0,
+                        style: {
+                            fontSize: '10px',
+                            color: Highcharts.getOptions().colors[2]
+                        },
+                        textAlign: 'left',
+                        x: 3
+                    },
+                    labels: {
+                        style: {
+                            fontSize: '8px',
+                            color: Highcharts.getOptions().colors[2]
+                        },
+                        y: 2,
+                        x: 3
+                    },
+                    gridLineWidth: 0,
+                    opposite: true,
+                    showLastLabel: false
                 }],
-                maxPadding: 0.3,
-                minRange: 8,
-                tickInterval: 1,
-                gridLineColor: (Highcharts.theme && Highcharts.theme.background2) || '#F0F0F0'
 
-            }, { // precipitation axis
-                title: {
-                    text: null
-                },
-                labels: {
+            legend:
+                {
                     enabled: false
-                },
-                gridLineWidth: 0,
-                tickLength: 0,
-                minRange: 10,
-                min: 0
-
-            }, { // Air pressure
-                allowDecimals: false,
-                title: { // Title on top of axis
-                    text: 'hPa',
-                    offset: 0,
-                    align: 'high',
-                    rotation: 0,
-                    style: {
-                        fontSize: '10px',
-                        color: Highcharts.getOptions().colors[2]
-                    },
-                    textAlign: 'left',
-                    x: 3
-                },
-                labels: {
-                    style: {
-                        fontSize: '8px',
-                        color: Highcharts.getOptions().colors[2]
-                    },
-                    y: 2,
-                    x: 3
-                },
-                gridLineWidth: 0,
-                opposite: true,
-                showLastLabel: false
-            }],
-
-            legend: {
-                enabled: false
-            },
+                }
+            ,
 
             plotOptions: {
                 series: {
                     pointPlacement: 'between'
                 }
-            },
+            }
+            ,
 
 
             series: [{
@@ -439,7 +462,8 @@
                 }
             }]
         };
-    };
+    }
+    ;
 
     /**
      * Post-process the chart from the callback function, the second argument to Highcharts.Chart.

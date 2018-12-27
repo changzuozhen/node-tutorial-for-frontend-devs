@@ -30,15 +30,19 @@
     ];
 
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'bar'
+            type:
+                'bar'
         },
         title: {
             text: 'Population pyramid for Germany, 2018'
-        },
+        }
+        ,
         subtitle: {
             text: 'Source: <a href="http://populationpyramid.net/germany/2018/">Population Pyramids of the World from 1950 to 2100</a>'
-        },
+        }
+        ,
         xAxis: [{
             categories: categories,
             reversed: false,
@@ -54,29 +58,34 @@
                 step: 1
             }
         }],
-        yAxis: {
-            title: {
-                text: null
-            },
-            labels: {
-                formatter: function () {
-                    return Math.abs(this.value) + '%';
+        yAxis:
+            {
+                title: {
+                    text: null
+                }
+                ,
+                labels: {
+                    formatter: function () {
+                        return Math.abs(this.value) + '%';
+                    }
                 }
             }
-        },
+        ,
 
         plotOptions: {
             series: {
                 stacking: 'normal'
             }
-        },
+        }
+        ,
 
         tooltip: {
             formatter: function () {
                 return '<b>' + this.series.name + ', age ' + this.point.category + '</b><br/>' +
                     'Population: ' + Highcharts.numberFormat(Math.abs(this.point.y), 0);
             }
-        },
+        }
+        ,
 
         series: [{
             name: 'Male',
@@ -98,7 +107,8 @@
                 0.0
             ]
         }]
-    });
+    })
+    ;
 
 </script>
 </body>

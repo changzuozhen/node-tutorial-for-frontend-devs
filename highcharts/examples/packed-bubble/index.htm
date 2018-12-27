@@ -23,36 +23,51 @@
 
 <script type="text/javascript">
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'packedbubble',
-            height: '100%'
+            type:
+                'packedbubble',
+            height:
+                '100%'
         },
         title: {
             text: 'Carbon emissions around the world (2014)'
-        },
+        }
+        ,
         tooltip: {
             useHTML: true,
-            pointFormat: '<b>{point.name}:</b> {point.y}m CO<sub>2</sub>'
-        },
+            pointFormat:
+                '<b>{point.name}:</b> {point.y}m CO<sub>2</sub>'
+        }
+        ,
         plotOptions: {
             packedbubble: {
                 dataLabels: {
                     enabled: true,
-                    format: '{point.name}',
-                    filter: {
-                        property: 'y',
-                        operator: '>',
-                        value: 250
-                    },
+                    format:
+                        '{point.name}',
+                    filter:
+                        {
+                            property: 'y',
+                            operator:
+                                '>',
+                            value:
+                                250
+                        }
+                    ,
                     style: {
                         color: 'black',
-                        textOutline: 'none',
-                        fontWeight: 'normal'
+                        textOutline:
+                            'none',
+                        fontWeight:
+                            'normal'
                     }
-                },
+                }
+                ,
                 minPointSize: 5
             }
-        },
+        }
+        ,
         series: [{
             name: 'Europe',
             data: [{
@@ -526,21 +541,23 @@
                     value: 610.1
                 }]
         }],
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 500
-                },
-                chartOptions: {
-                    legend: {
-                        align: 'right',
-                        verticalAlign: 'middle',
-                        layout: 'vertical'
+        responsive:
+            {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            align: 'right',
+                            verticalAlign: 'middle',
+                            layout: 'vertical'
+                        }
                     }
-                }
-            }]
-        }
-    });
+                }]
+            }
+    })
+    ;
 
 </script>
 </body>

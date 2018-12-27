@@ -70,36 +70,46 @@
 
 
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'pie',
-            description: 'Most commonly used desktop screen readers in July 2015 as reported in the Webaim Survey. Shown as percentage of respondents. JAWS is by far the most used screen reader, with 30% of respondents using it. ZoomText and Window-Eyes follow, each with around 20% usage.'
+            type:
+                'pie',
+            description:
+                'Most commonly used desktop screen readers in July 2015 as reported in the Webaim Survey. Shown as percentage of respondents. JAWS is by far the most used screen reader, with 30% of respondents using it. ZoomText and Window-Eyes follow, each with around 20% usage.'
         },
 
         title: {
             text: 'Desktop screen readers'
-        },
+        }
+        ,
 
         subtitle: {
             text: 'Click on point to visit official website'
-        },
+        }
+        ,
 
         plotOptions: {
             series: {
                 dataLabels: {
                     enabled: true,
-                    connectorColor: Highcharts.getOptions().colors[0],
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
-                },
+                    connectorColor:
+                        Highcharts.getOptions().colors[0],
+                    format:
+                        '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+                ,
                 point: {
                     events: {
                         click: function () {
                             window.location.href = this.website;
                         }
                     }
-                },
+                }
+                ,
                 cursor: 'pointer'
             }
-        },
+        }
+        ,
 
         series: [{
             name: 'Percentage usage',
@@ -147,7 +157,8 @@
                 color: 'url(#highcharts-default-pattern-5)'
             }]
         }]
-    });
+    })
+    ;
 
 </script>
 </body>

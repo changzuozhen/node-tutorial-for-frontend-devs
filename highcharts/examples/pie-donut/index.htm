@@ -239,29 +239,37 @@
 
     // Create the chart
     Highcharts.chart('container', {
+        credits: {enabled: false},
         chart: {
-            type: 'pie'
+            type:
+                'pie'
         },
         title: {
             text: 'Browser market share, January, 2018'
-        },
+        }
+        ,
         subtitle: {
             text: 'Source: <a href="http://statcounter.com" target="_blank">statcounter.com</a>'
-        },
+        }
+        ,
         yAxis: {
             title: {
                 text: 'Total percent market share'
             }
-        },
+        }
+        ,
         plotOptions: {
             pie: {
                 shadow: false,
-                center: ['50%', '50%']
+                center:
+                    ['50%', '50%']
             }
-        },
+        }
+        ,
         tooltip: {
             valueSuffix: '%'
-        },
+        }
+        ,
         series: [{
             name: 'Browsers',
             data: browserData,
@@ -287,22 +295,24 @@
             },
             id: 'versions'
         }],
-        responsive: {
-            rules: [{
-                condition: {
-                    maxWidth: 400
-                },
-                chartOptions: {
-                    series: [{
-                        id: 'versions',
-                        dataLabels: {
-                            enabled: false
-                        }
-                    }]
-                }
-            }]
-        }
-    });
+        responsive:
+            {
+                rules: [{
+                    condition: {
+                        maxWidth: 400
+                    },
+                    chartOptions: {
+                        series: [{
+                            id: 'versions',
+                            dataLabels: {
+                                enabled: false
+                            }
+                        }]
+                    }
+                }]
+            }
+    })
+    ;
 </script>
 </body>
 </html>
